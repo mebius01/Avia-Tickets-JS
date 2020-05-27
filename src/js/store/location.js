@@ -16,6 +16,9 @@ class Locations {
         this.cities = cities;
         return response;
     }
+    getCitiesByContryCode(code) {
+        return this.cities.filter(city => city.country_code === code);
+    }
 }
 
 const locations = new Locations(api);
